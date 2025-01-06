@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reader</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('./page2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .book-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-container {
+            position: relative;
+            width: 400px;
+            height: 600px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pages {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        #prevBtn, #nextBtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            min-width: 70px;
+            min-height: 90px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        #prevBtn {
+            left: 0px;
+        }
+
+        #nextBtn {
+            right: 0px;
+        }
+
+        #backtomain {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            padding: 25px 80px;
+            background-color: transparent;
+            color:transparent;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="page-container">
+            <div class="pages">
+                <img class="page" src="./images/Nash Car Manaual Pages2.jpg" alt="Book Page">
+                <img class="page" src="./images/Nash Car Manaual Pages3.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages4.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages5.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages6.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages7.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages8.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages9.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages10.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages11.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages12.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages13.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages14.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages15.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages16.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages17.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages18.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages19.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages20.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages21.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages22.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages23.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages24.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages25.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages26.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages27.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages28.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages29.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages30.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages31.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages32.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages33.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages34.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages35.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages36.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages37.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages38.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages39.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages40.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages41.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages42.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages43.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages44.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages45.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages46.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages47.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages48.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages49.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages50.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages51.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages52.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages53.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages54.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages55.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages56.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages57.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages58.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages59.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages60.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages61.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages62.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages63.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages64.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages65.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages66.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages67.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages68.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages69.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages70.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages71.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages72.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages73.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages74.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages75.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages76.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages77.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages78.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages79.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages80.jpg" alt="Book Page">
+<img class="page" src="./images/Nash Car Manaual Pages81.jpg" alt="Book Page">
+
+            </div>
+        </div>
+
+        <button id="prevBtn"></button>
+        <button id="nextBtn"></button>
+        <button id="backtomain" onclick="location.href='index.html'">Back to Home</button>
+    </div>
+
+    <script>
+        const pages = document.querySelectorAll('.page');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const totalPages = pages.length;
+        let currentPageNum = 1;
+
+        function updatePage() {
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            pages[currentPageNum - 1].classList.add('active');
+            prevBtn.disabled = currentPageNum === 1;
+            nextBtn.disabled = currentPageNum === totalPages;
+        }
+
+        updatePage();
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPageNum > 1) {
+                currentPageNum--;
+                updatePage();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPageNum < totalPages) {
+                currentPageNum++;
+                updatePage();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && currentPageNum > 1) {
+                currentPageNum--;
+                updatePage();
+            } else if (e.key === 'ArrowRight' && currentPageNum < totalPages) {
+                currentPageNum++;
+                updatePage();
+            }
+        });
+    </script>
+</body>
+</html>
